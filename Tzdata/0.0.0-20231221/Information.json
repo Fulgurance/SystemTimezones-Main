@@ -1,0 +1,21 @@
+{
+  "port": "SystemTimezones-Main",
+  "name": "Tzdata",
+  "version": "0.0.0-20231221",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Data that represent the history of local time for many representative locations around the globe",
+  "website": "https://www.iana.org/time-zones",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Glibc",
+      "version": "2.38.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
