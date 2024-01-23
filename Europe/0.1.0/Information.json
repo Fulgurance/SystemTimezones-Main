@@ -1,0 +1,23 @@
+{
+  "port": "SystemLanguages-Main",
+  "name": "Europe",
+  "version": "0.1.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to setup the english language",
+  "website": "https://github.com/Fulgurance/SystemTimezones-Main/tree/master/Europe",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "London",
+      "description": "Enable London support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}
