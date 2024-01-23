@@ -4,7 +4,7 @@ class Target < ISM::VirtualSoftware
         super
 
         if option("London")
-
+            makeLink("/usr/share/zoneinfo/Europe/London","#{Ism.settings.rootPath}/etc/localtime",:symbolicLinkByOverwrite)
         end
     end
 
