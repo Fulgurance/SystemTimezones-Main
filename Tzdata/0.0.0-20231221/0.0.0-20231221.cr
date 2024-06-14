@@ -17,16 +17,27 @@ class Target < ISM::Software
             "australasia",
             "backward"].each do |timezone|
 
-            runZicCommand(["-L","/dev/null","-d","/usr/share/zoneinfo/",timezone], mainWorkDirectoryPath)
-            runZicCommand(["-L","/dev/null","-d","/usr/share/zoneinfo/posix",timezone], mainWorkDirectoryPath)
-            runZicCommand(["-L","leapseconds","-d","/usr/share/zoneinfo/right",timezone], mainWorkDirectoryPath)
+            runZicCommand(  arguments:  "-L /dev/null -d /usr/share/zoneinfo/ #{timezone}",
+                            path:       mainWorkDirectoryPath)
+
+            runZicCommand(  arguments:  "-L /dev/null","-d","/usr/share/zoneinfo/posix #{timezone}",
+                            path:       mainWorkDirectoryPath)
+
+            runZicCommand(  arguments:  "-L","leapseconds","-d","/usr/share/zoneinfo/right #{timezone}",
+                            path:       mainWorkDirectoryPath)
         end
 
-        copyFile("#{mainWorkDirectoryPath}/zone.tab","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/zone.tab")
-        copyFile("#{mainWorkDirectoryPath}/zone1970.tab","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/zone1970.tab")
-        copyFile("#{mainWorkDirectoryPath}/iso3166.tab","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/iso3166.tab")
+        copyFile(   "#{mainWorkDirectoryPath}/zone.tab",
+                    "#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/zone.tab")
 
-        runZicCommand(["-d","/usr/share/zoneinfo","-p","America/New_York"], mainWorkDirectoryPath)
+        copyFile(   "#{mainWorkDirectoryPath}/zone1970.tab",
+                    "#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/zone1970.tab")
+
+        copyFile(   "#{mainWorkDirectoryPath}/iso3166.tab",
+                    "#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/iso3166.tab")
+
+        runZicCommand(  arguments:  "-d /usr/share/zoneinfo -p America/New_York",
+                        path:       mainWorkDirectoryPath)
     end
 
 end
