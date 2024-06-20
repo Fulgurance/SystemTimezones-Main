@@ -6,7 +6,7 @@ class Target < ISM::VirtualSoftware
         #Need to be improved
         if option("London")
             makeLink(   target: "/usr/share/zoneinfo/Europe/London",
-                        path:   "#{Ism.settings.rootPath}/etc/localtime",
+                        path:   "/etc/localtime",
                         type:   :symbolicLinkByOverwrite)
         end
     end
