@@ -1,12 +1,11 @@
 class Target < ISM::VirtualSoftware
 
-    def install
+    def prepareInstallation
         super
 
-        #Need to be improved
         if option("London")
             makeLink(   target: "/usr/share/zoneinfo/Europe/London",
-                        path:   "/etc/localtime",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/etc/localtime",
                         type:   :symbolicLinkByOverwrite)
         end
     end
