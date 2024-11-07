@@ -10,7 +10,7 @@
     {
       "port": "ProgrammingTools-Main",
       "name": "Glibc",
-      "version": "2.38.0",
+      "version": ">=2.38.0",
       "options": []
     }
   ],
