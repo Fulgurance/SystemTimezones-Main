@@ -17,13 +17,13 @@ class Target < ISM::Software
             "australasia",
             "backward"].each do |timezone|
 
-            runZicCommand(  arguments:  "-L /dev/null -d /usr/share/zoneinfo/ #{timezone}",
+            runZicCommand(  arguments:  "-L /dev/null -d #{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo #{timezone}",
                             path:       mainWorkDirectoryPath)
 
-            runZicCommand(  arguments:  "-L /dev/null -d /usr/share/zoneinfo/posix #{timezone}",
+            runZicCommand(  arguments:  "-L /dev/null -d #{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/posix #{timezone}",
                             path:       mainWorkDirectoryPath)
 
-            runZicCommand(  arguments:  "-L leapseconds -d /usr/share/zoneinfo/right #{timezone}",
+            runZicCommand(  arguments:  "-L leapseconds -d #{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/right #{timezone}",
                             path:       mainWorkDirectoryPath)
         end
 
