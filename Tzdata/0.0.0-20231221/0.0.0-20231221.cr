@@ -36,7 +36,7 @@ class Target < ISM::Software
         copyFile(   "#{mainWorkDirectoryPath}/iso3166.tab",
                     "#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo/iso3166.tab")
 
-        runZicCommand(  arguments:  "-d /usr/share/zoneinfo -p America/New_York",
+        runZicCommand(  arguments:  "-d #{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/zoneinfo -p America/New_York",
                         path:       mainWorkDirectoryPath)
     end
 
