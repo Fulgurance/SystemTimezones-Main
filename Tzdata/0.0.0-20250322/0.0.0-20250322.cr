@@ -3,7 +3,8 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(path: buildDirectoryPath)
+        makeSource( path: buildDirectoryPath,
+                    environment: {"CC" => "gcc"})
     end
 
     def prepareInstallation
