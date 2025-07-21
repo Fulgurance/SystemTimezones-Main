@@ -1,7 +1,7 @@
 {
   "port": "SystemTimezones-Main",
   "name": "Tzdata",
-  "version": "0.0.0-20231221",
+  "version": "0.0.0-20250322",
   "architectures": ["x86_64"],
   "description": "Data that represent the history of local time for many representative locations around the globe",
   "website": "https://www.iana.org/time-zones",
