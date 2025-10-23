@@ -1,0 +1,19 @@
+PORT
+    SystemTimezones-Main
+NAME
+    Tzdata
+VERSION
+    0.0.0-20250322
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Data that represent the history of local time for many representative locations around the globe
+WEBSITE
+    https://www.iana.org/time-zones
+DEPENDENCIES
+        @Components-Main:C-Library>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

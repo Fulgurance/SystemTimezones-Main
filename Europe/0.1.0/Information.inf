@@ -1,0 +1,24 @@
+PORT
+    SystemTimezones-Main
+NAME
+    Europe
+VERSION
+    0.1.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Virtual installer to setup the europe timezone
+WEBSITE
+    https://github.com/Fulgurance/SystemTimezones-Main/tree/master/Europe
+DEPENDENCIES
+KERNELDEPENDENCIES
+OPTIONS
+    name: London
+    description: Enable London support
+    active: false
+    dependencies:
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
